@@ -1,0 +1,30 @@
+:root {
+  --grid-size: 450px;
+  --margin-size: 10px;
+  --square-size: calc((var(--grid-size) / 3) - var(--margin-size));
+}
+
+h1 {
+  text-align: center;
+}
+
+#game-grid {
+  background-color: rgba(0, 0, 0, 0.5);
+  height: var(--grid-size);
+  width: var(--grid-size);
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+}
+
+#game-grid div {
+  background-color: #fff;
+  height: var(--square-size);
+  width: var(--square-size);
+}
+
+#game-grid img {
+  width: 100%;
+}
