@@ -23,8 +23,23 @@ h1 {
   background-color: #fff;
   height: var(--square-size);
   width: var(--square-size);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #game-grid img {
-  width: 100%;
+  width: 80%;
+}
+
+@media all and (max-width: 500px) {
+  #game-grid {
+    width: 100%;
+    max-width: 500px;
+  }
+  
+  #game-grid div {
+    height: calc(90% / 3);
+    width: calc(90% / 3);
+  }
 }
