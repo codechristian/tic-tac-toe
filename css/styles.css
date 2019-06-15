@@ -54,7 +54,7 @@ h1 {
   background-color: #353866;
 }
 
-reset-button:hover {
+.reset-button:hover {
   transition: all 150ms linear;
   opacity: .85;
 }
