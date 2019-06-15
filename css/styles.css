@@ -9,6 +9,10 @@ body {
   text-align: center;
 }
 
+h1 {
+  margin: 0;
+}
+
 #game-grid {
   background-color: rgba(0, 0, 0, 0.5);
   height: var(--grid-size);
