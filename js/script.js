@@ -70,6 +70,8 @@ function displayWinner() {
   for(const box of emptyBoxes) {
     box.removeEventListener('click', yourTurn);
   }
+  
+  document.querySelector('[data-section="body-tag"]').classList.add('game-over');
 }
 
 function checkBoxes(one, two, three) {
@@ -113,4 +115,20 @@ function getWinner() {
       checkBoxes('three', 'five', 'seven');
   
   return rowResult || colResult || diagonalResult; */
+}
+
+function resetGame() {
+  const resultContainer = document.querySelector('#results');
+  resultContainer.innerHTML = '';
+
+  emptyBoxes = [];
+  takenBoxes = {};
+
+  for (const box of boxes) {
+      box.innerHTML = '';
+      box.addEventListener('click', yourTurn);
+      emptyBoxes.push(box);
+  }
+
+  document.querySelector('[data-section="body-tag"]').classList.remove('game-over');
 }
