@@ -13,6 +13,10 @@ h1 {
   margin: 0;
 }
 
+.main-title {
+  margin-bottom: 8px;
+}
+
 #game-grid {
   background-color: rgba(0, 0, 0, 0.5);
   height: var(--grid-size);
@@ -36,6 +40,7 @@ h1 {
 #game-grid img {
   width: 80%;
 }
+
 .reset-button {
   display: none;
   margin: 10px;
