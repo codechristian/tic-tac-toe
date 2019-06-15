@@ -1,6 +1,7 @@
 const xImage = 'img/x.png'
 const yImage = 'img/y.png'
 const boxes = document.querySelectorAll('#game-grid div');
+const resetButton = document.querySelector('[data-button="reset-game"]');
 let emptyBoxes = [];
 //maps box number with owner either user 'x' or ai 'o'
 let takenBoxes = {};
@@ -70,6 +71,8 @@ function displayWinner() {
   for(const box of emptyBoxes) {
     box.removeEventListener('click', yourTurn);
   }
+  
+  document.querySelector('[data-section="body-tag"]').classList.add('game-over');
 }
 
 function checkBoxes(one, two, three) {
@@ -114,3 +117,21 @@ function getWinner() {
   
   return rowResult || colResult || diagonalResult; */
 }
+
+function resetGame() {
+    const resultContainer = document.querySelector('#results');
+    resultContainer.innerHTML = '';
+
+    emptyBoxes = [];
+    takenBoxes = {};
+
+    for (const box of boxes) {
+        box.innerHTML = '';
+        box.addEventListener('click', yourTurn);
+        emptyBoxes.push(box);
+    }
+
+    document.querySelector('[data-section="body-tag"]').classList.remove('game-over');
+}
+
+resetButton.addEventListener('click', resetGame);
