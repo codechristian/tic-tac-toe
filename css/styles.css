@@ -35,6 +35,13 @@ h1 {
 #game-grid img {
   width: 80%;
 }
+.reset-button {
+  display: none;
+}
+
+.game-over .reset-button {
+  display: inline-block;
+}
 
 @media all and (max-width: 500px) {
   #game-grid {
