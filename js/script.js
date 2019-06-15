@@ -1,9 +1,9 @@
 const xImage = 'img/x.png'
 const yImage = 'img/y.png'
 const boxes = document.querySelectorAll('#game-grid div');
-const emptyBoxes = [];
+let emptyBoxes = [];
 //maps box number with owner either user 'x' or ai 'o'
-const takenBoxes = {};
+let takenBoxes = {};
 
 for(const box of boxes) {
   box.addEventListener('click', yourTurn);
