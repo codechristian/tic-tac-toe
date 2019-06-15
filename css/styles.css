@@ -4,6 +4,10 @@
   --square-size: calc((var(--grid-size) / 3) - var(--margin-size));
 }
 
+body {
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
 h1 {
   text-align: center;
 }
